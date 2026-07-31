@@ -7,7 +7,7 @@ termux-setup-storage
 ```
 termux-change-repo
 # 或更换为清华源
-sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-main stable main@' $PREFIX/etc/apt/sources.list
+sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main stable main@' $PREFIX/etc/apt/sources.list
 ```
 3. 更新
 ```
