@@ -136,14 +136,6 @@ export LC_ALL=zh_CN.UTF-8
 ```
 chmod +x /etc/profile.d/locale.sh
 ```
-```
-nano /root/.bashrc
-```
-```
-export LANG=zh_CN.UTF-8
-export LANGUAGE=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
-```
 - 时区
 ```
 dpkg-reconfigure tzdata
@@ -159,15 +151,33 @@ nano ~/Desktop/code.desktop
 ```
 ```
 [Desktop Entry]
-Version=1.0
-Type=Application
 Name=Visual Studio Code
-Comment=Code Editing Redefined
-Exec=code --no-sandbox
-Icon=/usr/share/pixmaps/com.visualstudio.code.png
-Terminal=false
-Categories=Development;IDE;
-StartupNotify=true
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+Exec=/usr/share/code/code %F --no-sandbox
+Icon=vscode
+Type=Application
+StartupNotify=false
+StartupWMClass=Code
+Categories=TextEditor;Development;IDE;
+MimeType=application/x-code-workspace;
+Actions=new-empty-window;
+Keywords=vscode;
+
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Name[cs]=Nové prázdné okno
+Name[de]=Neues leeres Fenster
+Name[es]=Nueva ventana vacía
+Name[fr]=Nouvelle fenêtre vide
+Name[it]=Nuova finestra vuota
+Name[ja]=新しい空のウィンドウ
+Name[ko]=새 빈 창
+Name[ru]=Новое пустое окно
+Name[zh_CN]=新建空窗口
+Name[zh_TW]=開新空視窗
+Exec=/usr/share/code/code --new-window %F --no-sandbox
+Icon=vscode
 ```
 ```
 chmod +x ~/Desktop/code.desktop
@@ -182,8 +192,6 @@ export XDG_RUNTIME_DIR=/tmp/runtime-user
 ```
 ```
 source ~/.bashrc
-mkdir -p $XDG_RUNTIME_DIR
-chmod 700 $XDG_RUNTIME_DIR
 ```
 - 桌面快捷方式
 ```
@@ -205,7 +213,7 @@ StartupNotify=true
 ```
 chmod +x ~/Desktop/webstorm.desktop
 ```
-### Ibus
+### IBus
 ```
 nano ~/.bashrc
 ```
