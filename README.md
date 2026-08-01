@@ -20,25 +20,10 @@ passwd
 sshd
 ```
 ## 安装 PRoot-Distro
-### 在线
 ```
 apt install proot-distro
 pd install debian
 ```
-### 离线
-1. 下载rootfs文件
-2. 创建缓存目录
-```
-mkdir -p $PREFIX/var/lib/proot-distro/dlcache
-```
-3. 将rootfs文件放入缓存目录
-```
-mv rootfs.tar.xz $PREFIX/var/lib/proot-distro/dlcache
-```
-4. 安装
-```
-pd install debian
-``` 
 ## Proot-Distro
 ### 启动命令
 ```
