@@ -194,11 +194,12 @@ nano ~/Desktop/webstorm.desktop
 Version=1.0
 Type=Application
 Name=WebStorm
-Comment=The Smartest JavaScript IDE
-Exec=/home/user/Programs/WebStorm/bin/webstorm
-Icon=/home/user/Programs/WebStorm/bin/webstorm.png
-Terminal=false
+Icon=/home/user/Programs/WebStorm-262.8665.341/bin/webstorm.svg
+Exec="/home/user/Programs/WebStorm-262.8665.341/bin/webstorm" %f
+Comment=The smartest JavaScript IDE
 Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-webstorm
 StartupNotify=true
 ```
 ```
